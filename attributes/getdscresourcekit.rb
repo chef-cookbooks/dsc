@@ -1,0 +1,2 @@
+default["dsc"]["getdscresourcekit"]["dscResourceKitDownloadURL"] = "http://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d/file/120455/1/DSC%20Resource%20Kit%20Wave%205%2007212014.zip"
+default["dsc"]["getdscresourcekit"]["dscResourceKitZipName"] = "DSC Resource Kit Wave 5 07212014.zip"

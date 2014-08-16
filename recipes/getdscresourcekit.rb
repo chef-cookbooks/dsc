@@ -17,14 +17,16 @@
 # limitations under the License.
 #
 
-remote_file "#{Chef::Config[:file_cache_path]}\\DSC Resource Kit 03282014.zip" do
-  source 'http://gallery.technet.microsoft.com/scriptcenter/DSC-Resource-Kit-All-c449312d/file/116327/1/DSC%20Resource%20Kit%20Wave%204%2006052014.zip'
+dscZipName = node["dsc"]["getdscresourcekit"]["dscResourceKitZipName"]
+
+remote_file "#{Chef::Config[:file_cache_path]}\\#{dscZipName}" do
+  source node["dsc"]["getdscresourcekit"]["dscResourceKitDownloadURL"]
 end
 
 dsc_resource 'get-dsc-resource-kit' do
   resource_name :archive
   property :ensure, 'Present'
-  property :path, "#{Chef::Config[:file_cache_path]}\\DSC Resource Kit 03282014.zip"
+  property :path, "#{Chef::Config[:file_cache_path]}\\#{dscZipName}"
   property :destination, "#{ENV['PROGRAMW6432']}\\WindowsPowerShell\\Modules"
 end
 
