@@ -3,6 +3,10 @@ dsc-preview CHANGELOG
 
 This file is used to list changes made in each version of the dsc-preview cookbook.
 
+0.1.1
+-----
+- [MattHodge] - Added attributes for getdscresourcekit.rb recipe
+
 0.1.0
 -----
 - [adamed@getchef.com] - Initial implementation of dsc-preview
